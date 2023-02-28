@@ -36,9 +36,7 @@ function prompt(question: string, callback: Function): void {
   })
 }
 
-prompt('Enter (1) for perimeter, (2) for area in meters:', function (
-  inputChoice: string
-): void {
+prompt('Enter (1) for perimeter, (2) for area in meters:', function (inputChoice: string): void {
   prompt('Enter Length: ', function (inputLegnth: string): void {
     prompt('Enter Width: ', function (inputWidth: string): void {
       let Length = +inputLegnth

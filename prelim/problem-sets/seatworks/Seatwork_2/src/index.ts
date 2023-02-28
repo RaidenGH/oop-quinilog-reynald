@@ -41,9 +41,9 @@ prompt('Enter (1) for perimeter, (2) for area in meters:', function (
 ): void {
   prompt('Enter Length: ', function (inputLegnth: string): void {
     prompt('Enter Width: ', function (inputWidth: string): void {
-      const Length = +inputLegnth
-      const Choice = +inputChoice
-      const Width = +inputWidth
+      let Length = +inputLegnth
+      let Choice = +inputChoice
+      let Width = +inputWidth
       const perimeter = 2 * Length + 2 * Width
       const area = Length * Width
 
@@ -57,7 +57,11 @@ prompt('Enter (1) for perimeter, (2) for area in meters:', function (
         default:
           console.log('INVALID!')
           break
+       
+          return
       }
     })
   })
 })
+
+

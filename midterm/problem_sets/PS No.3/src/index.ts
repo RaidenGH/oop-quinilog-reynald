@@ -40,8 +40,8 @@ prompt('Enter: (C) for Celsius, (F) for Fahrenheit, (K) for Kelvin:', function (
   switch (inputChoices) {
     case 'C':
       prompt('Enter Celsius:', function (inputCelsius: string): void {
-        let Celsius = +inputCelsius
-        let Kelvin= 273.15
+        const Celsius = +inputCelsius
+        const Kelvin = 273.15
         const Result = Kelvin + Celsius
 
         console.log(`Temperature in Kelvin: ${Result}`)
@@ -50,7 +50,7 @@ prompt('Enter: (C) for Celsius, (F) for Fahrenheit, (K) for Kelvin:', function (
     case 'F':
       prompt('Enter Fahrenheit:', function (inputFahrenheit: string): void {
         const Fahrenheit = +inputFahrenheit
-        const Result = (Fahrenheit-32)/1.8 +273.15
+        const Result = (Fahrenheit - 32) / 1.8 + 273.15
 
         console.log(`Temperature in Kelvin: ${Result}`)
       })

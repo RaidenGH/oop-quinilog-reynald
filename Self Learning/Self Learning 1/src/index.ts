@@ -28,13 +28,15 @@
 // // // Using a forEach loop to iterate over the array
 // // numbers.forEach(num => console.log(num));
 
-// //map
+//map
 // const numbers: number[] = [1, 2, 3, 4, 5];
 
 // const doubledNumbers = numbers.map(num => num * 3);
 
 // console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
 
+
+//reduce
 // interface Item {
 //     name: string;
 //     price: number;
@@ -50,6 +52,7 @@
   
 //   console.log(total); // Output: 60
 
+//filter
 // interface Person {
 //     name: string;
 //     age: number;

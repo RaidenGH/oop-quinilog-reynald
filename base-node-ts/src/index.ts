@@ -9,3 +9,4 @@ function prompt(question: string, callback: Function): void {
     callback(data.toString().trim())
   })
 }
+

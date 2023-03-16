@@ -1,7 +1,5 @@
 // Problem Set No. 3
 
-import { compileFunction } from "vm"
-
 // Create a program that will convert temperaturs to C, F, K and vice versa.
 
 // Formula:

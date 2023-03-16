@@ -1,5 +1,7 @@
 // Problem Set No. 3
 
+import { compileFunction } from "vm"
+
 // Create a program that will convert temperaturs to C, F, K and vice versa.
 
 // Formula:
@@ -37,25 +39,60 @@ function prompt(question: string, callback: Function): void {
 prompt('Enter: (C) for Celsius, (F) for Fahrenheit, (K) for Kelvin:', function (
   inputChoices: string
 ): void {
-  switch (inputChoices) {
+  switch (inputChoices.toUpperCase()) {
     case 'C':
       prompt('Enter Celsius:', function (inputCelsius: string): void {
-        const Celsius = +inputCelsius
-        const Kelvin = 273.15
-        const Result = Kelvin + Celsius
-
-        console.log(`Temperature in Kelvin: ${Result}`)
+        prompt('Convert to (F) Fahrenheit, (K) for Kelvin:', function (inputChoices:string): void {
+          const Celsius = +inputCelsius
+          const Fahrenheit = Celsius * 1.8 + 32
+          const Kelvin = 273.15 + Celsius
+          
+          switch (inputChoices.toUpperCase()){
+            case 'F':
+              console.log (`Temperature in Fahrenheit: ${Fahrenheit}°`)
+              break
+              case 'K':
+                console.log (`Temperature in Kelvin: ${Kelvin}°`)
+          }
+        })
       })
       break
     case 'F':
       prompt('Enter Fahrenheit:', function (inputFahrenheit: string): void {
-        const Fahrenheit = +inputFahrenheit
-        const Result = (Fahrenheit - 32) / 1.8 + 273.15
+        prompt('Convert to (C) Celsius, (K) for Kelvin:',function(inputChoices:string):void{
+          const Fahrenheit = +inputFahrenheit
+          const Kelvin = (Fahrenheit - 32) / 1.8 + 273.15
+          const Celsius = (5/9)*(Fahrenheit-32)
+          
+          switch(inputChoices.toUpperCase()){
+            case 'C':
+              console.log(`Temperature in Celsius: ${Celsius}°`)
+              break
+              case 'K':
+               console.log(`Temperature in Kelvin: ${Kelvin}°`)
+          }
+        })
+      })
+    break
+    case 'K':
+      prompt('Enter Kelvin:', function (inputKelvin: string): void{
+        prompt('Convert to (C) Celsius, (F) for Fahrenheit:',function(inputChoices:string):void{
+          const Kelvin = +inputKelvin
+          const Celsius = Kelvin - 273.15
+          const Fahrenheit = (Kelvin - 273.15) * 1.8 + 32
 
-        console.log(`Temperature in Kelvin: ${Result}`)
+          switch (inputChoices.toUpperCase()){
+            case 'C':
+              console.log(`Temperature in Celsius: ${Celsius}°`)
+              break
+              case 'F':
+                console.log(`Temperature in Fahrenheit: ${Fahrenheit}°`)
+          }
+        })
       })
       break
-    default:
-      break
+      default:
+        console.log('Invalid')
+        break
   }
 })

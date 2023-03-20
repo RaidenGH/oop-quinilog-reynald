@@ -24,11 +24,11 @@ function prompt(question: string, callback: Function): void {
   })
 }
 
-prompt('Enter a positive number:', function (inputFactorial: string): void {
+prompt('Enter a Positive Number:', function (inputFactorial: string): void {
   const Factorial = +inputFactorial
 
   if (Factorial < 0) {
-    console.log('Error: Please enter a positive number')
+    console.log('Error: Please Enter a Positive Number')
   } else if (Factorial === 0) {
     console.log('Factorial of 0! is 1')
   } else {

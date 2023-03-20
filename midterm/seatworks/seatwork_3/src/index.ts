@@ -24,18 +24,16 @@ function prompt(question: string, callback: Function): void {
   })
 }
 
-prompt('Enter range:', function(inputRange: string): void {
+prompt('Enter Range:', function(inputRange: string): void {
   const Range = +inputRange
   
 
- for (let i = 1; i <= Range; i++) {
-  if(i % 2 === 0){
-    console.log(`${i} is even`)
+  for (let n = 1; n <= Range; n++) {
+    if(n % 2 === 0){
+      console.log(`${n} is Even`)
+    }
+    else {
+      console.log(`${n} is Odd`)
+    }
   }
-  else {
-    console.log(`${i} is odd`)
-  }
- }
-
-
 })

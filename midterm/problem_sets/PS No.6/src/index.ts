@@ -24,24 +24,23 @@ function prompt(question: string, callback: Function): void {
   })
 }
 
-function SortNumber(numbers: number[], isOdd: boolean = true): number[] {
-  const result: number[] = [];
-  const parity = isOdd ? 1 : 0; 
+function SortNumber(numbers: number[], isOdd = true): number[] {
+  const result: number[] = []
+  const parity = isOdd ? 1 : 0
 
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] % 2 === parity) {
-      result.push(numbers[i]);
+      result.push(numbers[i])
     }
   }
 
-  return result;
+  return result
 }
+prompt('Enter Numbers:', function (inputNumbers: string): void {
+  const numbers = inputNumbers.split(',').map(Number)
+  const oddNumbers = SortNumber(numbers, true)
+  const evenNumbers = SortNumber(numbers, false)
 
-
-const numbers = [10, 1, 2, 2, 5];
-const oddNumbers = SortNumber(numbers, true);
-const evenNumbers = SortNumber(numbers, false);
-
-console.log(`Odd numbers: ${oddNumbers}`); 
-console.log(`Even numbers: ${evenNumbers}`); 
-
+  console.log(`Odd numbers: [${oddNumbers}]`)
+  console.log(`Even numbers:[${evenNumbers}]`)
+})

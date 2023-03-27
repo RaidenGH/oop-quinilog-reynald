@@ -24,9 +24,9 @@ function prompt(question: string, callback: Function): void {
   })
 }
 
-function filterByParity(numbers: number[], isOdd: boolean = true): number[] {
+function SortNumber(numbers: number[], isOdd: boolean = true): number[] {
   const result: number[] = [];
-  const parity = isOdd ? 1 : 0; // 1 for odd, 0 for even
+  const parity = isOdd ? 1 : 0; 
 
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] % 2 === parity) {
@@ -39,8 +39,8 @@ function filterByParity(numbers: number[], isOdd: boolean = true): number[] {
 
 
 const numbers = [10, 1, 2, 2, 5];
-const oddNumbers = filterByParity(numbers, true);
-const evenNumbers = filterByParity(numbers, false);
+const oddNumbers = SortNumber(numbers, true);
+const evenNumbers = SortNumber(numbers, false);
 
 console.log(`Odd numbers: ${oddNumbers}`); 
 console.log(`Even numbers: ${evenNumbers}`); 

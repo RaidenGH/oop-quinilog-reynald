@@ -175,7 +175,7 @@ function getHighestSalesRecord() {
 }
 
 
-prompt('Enter a year to query',function(inputYear:string):void{
+prompt('Enter a Year to Query:',function(inputYear:string):void{
     const userInput= inputYear
 
     console.log(`Total sales for ${userInput}: ${totalSales(userInput)}`);

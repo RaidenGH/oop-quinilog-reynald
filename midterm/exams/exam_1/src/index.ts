@@ -31,10 +31,10 @@ function prompt(question: string, callback: Function): void {
     callback(data.toString().trim())
   })
 }
-prompt('Enter a Positive Enteger:',function(inputInteger:number):void{
+prompt('Enter a Positive Enteger:', function (inputInteger: number): void {
   console.log('Output:')
-  for(let i=1; i <= inputInteger;i++){
-    if (i % 5===0){
+  for (let i = 1; i <= inputInteger; i++) {
+    if (i % 5 === 0) {
       console.log(i)
     }
   }

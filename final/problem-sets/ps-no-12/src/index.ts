@@ -29,8 +29,8 @@
 
 // can calculate and call getPercentageMark public function which calculates the percentage mark of score if total score is 100
 class Person {
-  public firstName: string 
-  public lastName: string 
+  public firstName: string
+  public lastName: string
 
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName
@@ -58,7 +58,7 @@ class Student extends Person {
     super(firstName, lastName)
 
     if (score < 0 || score > 100) {
-      console.log("Score should be in the range of 0 to 100.")
+      console.log('Score should be in the range of 0 to 100.')
     }
 
     this.score = score
@@ -69,15 +69,10 @@ class Student extends Person {
   }
 }
 
-
-
-const employee = new Employee("John", "Doe", 50000)
+const employee = new Employee('John', 'Doe', 50000)
 employee.displaySalary()
 
-const student = new Student("Jane", "Smith", 100)
-console.log('Student:',student.getPercentageMark())
+console.log('\n')
 
-
-
-
-
+const student = new Student('Jane', 'Smith', 105)
+console.log('Student:', student.getPercentageMark())
